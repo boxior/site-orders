@@ -50,6 +50,7 @@ console.log(order);
 
   if(e.status === 'bidding') {
     order.find('.order__assigned').html(e.bids + ' bids');
+    order.find('.letter').css('display', 'block');
   } else {
     order.find('.order__icon').css({"background-image" : "url('" + e.icon + "')"});
   }
