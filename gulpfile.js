@@ -55,7 +55,12 @@ gulp.task('img', function() {
   .pipe(gulp.dest('docs/img'));
 });
 
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+});
+
 gulp.task('watch', ['browser-sync'], function() {
+  gulp.watch('app/*.js', ['bs-reload']);
   gulp.watch('app/sass/**/*.sass', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
 });

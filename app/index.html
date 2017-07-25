@@ -59,66 +59,66 @@
         </div>
       </header>
 <!-- Header end -->
-    <div class="container">
-
-        <div class="order">
-           <div class="order__item">
-             
-           </div>
-           <div class="order__item">
-             <div class="order__title">What is State Regulations? Why is it impo... rtant? Provide con</div>
-             <div class="order__cat">Psychology and Education, Argumentative essay </div>
-           </div>
-
-           <div class="order__item">
-             <div class="order__deadline">May 28, 11:59 AM</div>
-             <div class="order__status-dedline">4 days left</div>
-           </div>
-
-           <div class="order__item">
-             <div class="order__steps">Progress (pages 1 of 5)</div>
-             <div class="order__currentStep">
-               <span class="order__currentStep--1"></span>
-               <span class="order__currentStep--2"></span>
-               <span class="order__currentStep--3"></span>
-               <span class="order__currentStep--4"></span>
-               <span class="order__currentStep--5"></span>
-             </div>
-           </div>
-
-           <div class="order__item">
-           <div class="order__assigned">
-             <div class="order__icon">
-                <img src="img/user_1.png" alt="user">
-                 <span class="order__status"></span>
-             </div>
-            
-            <div class="order__about-user">
-              <div class="order__name">kinGchelo</div>
-             <div class="order__rate"><i class="fa fa-star star" aria-hidden="true"></i>9.8</div>
-            </div>
-             
-           </div>
-           </div>
-
-           <div class="order__item">
-             <div class="order__price">$1250</div>
-             <div class="order__paid">$100</div>
-           </div>
-
-           <div class="order__item">
-             <div class="order__id">#34453456</div>
-           </div>
-         </div> 
-      
-
-
+<div class="container">
+    
+    <div class="content-header">
+      <div>title</div>
+      <div>deadline</div>
+      <div>status</div>
+      <div>assigned to</div>
+      <div>price / paid</div>
+      <div>id</div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <div class="content">
 
+        <div class="order" id="order-template" style="display: none;">
+           <div class="order__item">
+             <div class="order__title"></div>
+             <div class="order__cat"></div>
+           </div>
+
+           <div class="order__item">
+             <div class="order__deadline"></div>
+             <div class="order__timeleft"></div>
+           </div>
+
+           <div class="order__item">
+             <div class="order__status"></div>
+             <div class="order__currentStep">
+                <div class="status-bar__inner"></div>            
+             </div>
+           </div>
+
+           <div class="order__item">
+             <div class="order__assigned">
+               <div class="order__icon">
+                <span class="order__log" style="display: none"></span>
+               </div>
+              <div class="order__about-user">
+                <div class="order__name"></div>
+                <div class="order__star-rate">
+                  <i class="fa fa-star star" aria-hidden="true"></i>
+                  <div class="order__rate"></div>
+                </div>
+              </div>
+             </div>
+           </div>
+
+           <div class="order__item">
+             <div class="order__price"></div>
+             <div class="order__paid"></div>
+           </div>
+
+           <div class="order__item">
+             <div class="order__id"></div>
+           </div>
+         </div> 
+
+    </div>
+</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     
   </body>
 </html>

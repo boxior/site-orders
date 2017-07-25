@@ -1,0 +1,52 @@
+[
+    {
+        "title" : "What is State Regulations? Why is it important? Provide concrete examples. ",
+        "cat" : "Psychology and Education, Argumentative essay",
+        "deadline" : "May 28, 11:59 AM",
+        "status" : "progress",
+        "steps" : "5",
+        "currentStep" : "1",
+        "bids" : "35", 
+        "name" : "Nevajno",
+        "rate" : "9.8",
+        "icon" : "img/user_1.png",
+        "log" : "online",
+        "price" : "$1250",
+        "paid" : "$100",
+        "id" : "#4545454"
+    },
+    
+    {
+        "title" : "Microeconomic",
+        "cat" : "Coursework, Health Care and Life Sciences",
+        "deadline" : "May 25, 11:59 AM",
+        "status" : "bidding",
+        "steps" : "1",
+        "currentStep" : "1",
+        "bids" : "35", 
+        "name" : "",
+        "rate" : "",
+        "icon" : "",
+        "log" : "",
+        "price" : "$230",
+        "paid" : "$0",
+        "id" : "#5445454"
+    },
+
+    {
+        "title" : "why lying and stealing is wrong ",
+        "cat" : "Essay (any type), English and Literature",
+        "deadline" : "July 25, 2:29 PM",
+        "status" : "canceled automatically",
+        "steps" : "1",
+        "currentStep" : "1",
+        "bids" : "35",         
+        "name" : "Schofield",
+        "rate" : "8.9",
+        "icon" : "img/user_2.png",
+        "log" : "offline",
+        "price" : "$30",
+        "paid" : "$0",
+        "id" : "#4745454"
+    }
+]
