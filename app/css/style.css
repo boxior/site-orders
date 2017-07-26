@@ -51,6 +51,7 @@ h1, h2, h3, h4, h6 {
   padding: 0 3rem; }
 
 .order-nav {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,12 +66,33 @@ h1, h2, h3, h4, h6 {
           align-items: center;
   padding: 4rem 0 2.5rem 0;
   border-bottom: .2rem solid silver; }
+  .order-nav:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -.5rem;
+    left: 13.5%;
+    border-style: solid;
+    border-width: 0 2.5rem 2.5rem 2.5rem;
+    border-color: transparent transparent #ffffff transparent; }
   .order-nav__menu div {
     position: relative;
     display: inline-block;
     font-size: 1.6rem;
     text-transform: uppercase;
     margin-left: 4.5rem; }
+    .order-nav__menu div.active {
+      color: #76ac5c; }
+      .order-nav__menu div.active:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -2.7rem;
+        left: -25%;
+        width: 150%;
+        height: .3rem;
+        background: #76ac5c; }
     .order-nav__menu div:hover {
       cursor: pointer;
       color: #76ac5c; }
@@ -148,7 +170,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
-  margin-left: -10rem; }
+  margin-left: -18.5rem; }
+  .nav-menu .active {
+    color: #ffffff; }
   .nav-menu__item {
     display: inline-block;
     margin-left: 4rem; }
@@ -188,6 +212,8 @@ header {
             border-radius: .5rem;
     background: inherit;
     padding: 1.5rem 1rem; }
+    .right-menu .new-order:hover {
+      cursor: pointer; }
     .right-menu .new-order .fa {
       margin-left: 0; }
       .right-menu .new-order .fa span {

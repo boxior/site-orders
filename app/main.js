@@ -31,7 +31,6 @@ function buildOrder(e) {
       .removeAttr('id')
       .css('display', 'flex')
       .addClass('order__' + e.status);
-console.log(order);
 
   var statusBarWidth = e.currentStep / e.steps * 100 + '%';
 
@@ -39,10 +38,8 @@ console.log(order);
     order.find('.order__' + field).html(e[field]);
   });
 
-  if(e.title.length > 41) {
-    order.find('.order__title').html(e.title.slice(0,41) + '...');
-  }
-
+  if (e.title.length > 41) order.find('.order__title').html(e.title.slice(0, 41) + '...');
+console.log(typeof(e.title.length));
   if(e.status === 'progress') {
     order.find('.order__status').html(e.status + " (pages " + e.currentStep + " of " + e.steps + ")");
     order.find('.order__log').css('display', 'block');
@@ -76,3 +73,42 @@ function getTimeLeft(deadline) {
 
   return diffResult + ' left';
 }
+
+function getStatusOrder(status){
+
+  app.orders.forEach(function(e){
+    if(e.status === status) {
+      $('.content').children().css('display', 'none');
+      buildOrder(e);
+    }
+  });
+}
+
+$('#finished').on('click', function(e){
+  $('#recent').removeClass('active');
+  $('#canceled').removeClass('active');
+  $('#finished').addClass('active');
+  getStatusOrder("bidding");
+});
+
+$('#canceled').on('click', function(e){
+
+  $('#recent').removeClass('active');
+  $('#canceled').addClass('active');
+  $('#finished').removeClass('active');
+  getStatusOrder("canceled automatically");
+});
+
+$('#recent').on('click', function(e){
+  $('#recent').addClass('active');
+  $('#canceled').removeClass('active');
+  $('#finished').removeClass('active');
+  $('.content').children().css('display', 'none');
+  parseOrders();
+});
+
+function sortOrders(){
+  $('.content').children().css('display', 'none');
+
+}
+
