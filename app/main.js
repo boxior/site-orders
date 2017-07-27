@@ -5,7 +5,6 @@ $(function () {
   customSelectInit();
 });
 
-$('select').select2().css('font-size','1.6rem');
 
 var app = {
   orders: [],
@@ -29,6 +28,7 @@ function parseOrders() {
 }
 
 function sortedOrders(sortBy){
+
   var sortedArray = [];
 
   if (sortBy == 'deadline') {
@@ -39,21 +39,21 @@ function sortedOrders(sortBy){
     sortedArray = app.orders.sort(function(a,b){
       return a[sortBy].slice(1) - b[sortBy].slice(1);
 
-    });console.log(sortedArray);
+    });
   }
   orderRemove();
   sortedArray.forEach(function(el){
     buildOrder(el);
   });
+   
 }
-
 function customSelectInit(){
-  var $sortSelect = $('.order-nav__sorted').css('text-transform', 'uppercase');
+  var $sortSelect = $('.order-nav__sorted');
 
   $sortSelect.select2({
     minimumResultsForSearch: Infinity
   });
-
+ 
   $sortSelect.on("select2:select", function (e) { 
     sortedOrders(e.params.data.id);
   });
@@ -66,7 +66,7 @@ function buildOrder(e) {
       .attr('data-sort', e.id.slice(1))
       .css('display', 'flex')
       .addClass('order__' + e.status);
-// console.log(e)
+
   var statusBarWidth = e.currentStep / e.steps * 100 + '%';
 
   app.fields.forEach(function(field){
@@ -128,10 +128,9 @@ function orderRemove(){
 }
 
 function getStatusOrder(status){
-
+  orderRemove();
   app.orders.forEach(function(e){
     if(e.status === status) {
-      orderRemove();
       buildOrder(e);
     }
   });
@@ -165,3 +164,25 @@ $('#sorted').on('click', function(){
   sortOrders();
 })
 
+$('.balance').hover(function(){
+  $('.balance__after').css('display','block');
+}, function(){
+  $('.balance__after').css('display','none');
+});
+
+
+
+
+
+function windowSize(){
+    if ($(window).width() <= '768'){
+        $('.mobile-nav-menu').children().remove();
+        $('.nav-menu').clone().appendTo('.mobile-nav-menu');
+
+       $('.balance').on('click', function(){
+        $('.balance__after').toggle();
+       });
+    }
+}
+
+$(window).on('load resize',windowSize);

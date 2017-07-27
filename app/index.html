@@ -11,6 +11,9 @@
     
   </head>
   <body>
+    <div class="wrapper">
+    
+  
       <header class="header">
         <div class="logo">
           <i class="fa fa-pencil" aria-hidden="true">iWrite</i>
@@ -45,6 +48,12 @@
               </i>
             </a>
           </li>
+          <li class="nav-menu__item">
+            <div class="balance__after" style="display: none">
+              <span class="balance__top">$40.00</span>
+              <span class="balance__bottom">$50.60</span>
+            </div>
+          </li>
         </ul>
         <div class="right-menu">
           <button class="new-order">
@@ -55,9 +64,10 @@
           <button class="right-menu__user">
             <i class="fa fa-user right-menu__user--fa-user" aria-hidden="true"></i>
             <i class="fa fa-chevron-down right-menu__user--fa-down" aria-hidden="true"></i>
-          </button>
+          </button>    
+        </div>
+        <div class="mobile-nav-menu">
           
-            
         </div>
       </header>
 <!-- Header end -->
@@ -70,10 +80,10 @@
         <div id="canceled">Canceled</div>
       </div>
       <select class="order-nav__sorted">
-        <option value="none" class="sorted" disabled="" selected="">sorted by ...</option>
-        <option value="id" class="sorted">sorted by Id</option>
-        <option value="price" class="sorted">sorted by Price</option>
-        <option value="deadline" class="sorted">sorted by Deadline</option>
+        <option value="none" id="sorted" disabled="" selected="">sorted by ...</option>
+        <option value="id" id="sorted">sorted by Id</option>
+        <option value="price" id="sorted">sorted by Price</option>
+        <option value="deadline" id="sorted">sorted by Deadline</option>
       </select>
     </div>
     
@@ -141,6 +151,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="main.js"></script>
-    
+    </div>
   </body>
 </html>

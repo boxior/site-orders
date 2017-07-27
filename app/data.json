@@ -48,5 +48,38 @@
         "price" : "$30",
         "paid" : "$0",
         "id" : "#4745454"
+    },
+
+    {
+        "title" : "why lying and stealing is wrong ",
+        "cat" : "Essay (any type), English and Literature",
+        "deadline" : "June 15, 2:29 PM",
+        "status" : "canceled automatically",
+        "steps" : "4",
+        "currentStep" : "1",
+        "bids" : "35",         
+        "name" : "Schofield",
+        "rate" : "8.9",
+        "icon" : "img/user_2.png",
+        "log" : "offline",
+        "price" : "$70",
+        "paid" : "$0",
+        "id" : "#4785454"
+    },
+    {
+        "title" : "Microeconomic",
+        "cat" : "Coursework, Health Care and Life Sciences",
+        "deadline" : "May 25, 11:59 AM",
+        "status" : "bidding",
+        "steps" : "1",
+        "currentStep" : "1",
+        "bids" : "35", 
+        "name" : "",
+        "rate" : "",
+        "icon" : "",
+        "log" : "",
+        "price" : "$230",
+        "paid" : "$0",
+        "id" : "#5445454"
     }
 ]

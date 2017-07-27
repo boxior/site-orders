@@ -1,3 +1,62 @@
 @media only screen and (min-width: 300px)
 	html
 		font-size: 0.6987vw
+
+@media only screen and(max-width: 768px)
+	html
+		font-size: 14px
+
+	.order
+		flex-direction: column
+		align-items: center
+		justify-content: space-around
+		&-nav
+			&:before
+				left: -1rem
+			&__menu
+				> div
+					margin: 0 2rem 0 0
+
+		&__item
+			text-align: -webkit-center
+			margin-top: 4rem
+			&:nth-child(2)
+				width: 100%
+			&:nth-child(3)
+				width: 100%
+			&:nth-child(4)
+				width: 100%
+			&:nth-child(5)
+				text-align: center
+				width: 100%
+			&:nth-child(6)
+				text-align: center
+				width: 100%
+			&:nth-child(7)
+				width: 100%
+				text-align: center
+
+		&__currentStep
+			text-align: -webkit-auto
+
+	.nav-menu 
+		display: none
+
+	.header
+		flex-wrap: wrap
+
+	.mobile-nav-menu
+		display: flex 
+		width: 100%
+		margin-top: 1rem
+		.nav-menu
+			display: flex
+			width: 100%
+			justify-content: space-around
+			align-items: center
+			margin-left: 0
+			&__item
+				margin: 0
+
+	.content-header
+		display: none

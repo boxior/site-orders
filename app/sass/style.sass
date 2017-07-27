@@ -16,6 +16,9 @@ html
 	line-height: 1
 	min-width: 768px
 
+.wrapper
+	overflow: hidden
+
 p, a, .link
 	font-size: 1rem
 h1
@@ -36,8 +39,8 @@ h1, h2, h3, h4, h6
 	text-transform: uppercase
 	font-weight: bold
 .container
-	margin: 0 10rem
 	padding: 0 3rem
+
 
 .order-nav
 	position: relative
@@ -89,10 +92,39 @@ h1, h2, h3, h4, h6
 					height: .3rem
 					background: #76ac5c
 	&__sorted
-		.sorted
+		// font-size: 1.6rem
+		// text-transform: uppercase
+		#sorted
+			font-size: 1.6rem
+			text-transform: uppercase
 			&:hover 
-				cursor: pointer
-				background: #f3f5f7
+				// cursor: pointer
+				// background: #f3f5f7
+// .select2
+// 	font-size: 1.6rem
+// 	width: 20rem
+// 	text-transform: uppercase
+// 	background: red
+// 	&-dropdown
+// 		background: red
+// 		width: 20rem
+// 	&-container
+// 		width: 200px
+// 		font-size: 1.6rem
+// 		text-transform: uppercase
+// 		&--default
+// 			width: 200px
+// 			font-size: 1.6rem
+// 			text-transform: uppercase
+// 	&-selection
+// 		font-size: 1.6rem
+// 		text-transform: uppercase
+// 		&__rendered
+// 			font-size: 1.6rem
+// 			text-transform: uppercase
+// 		&--single
+// 			font-size: 1.6rem
+// 			text-transform: uppercase
 
 .content-header
 	padding: 2.5rem 2.5rem 2.5rem 4.5rem
@@ -128,7 +160,7 @@ header
 	display: flex
 	justify-content: space-between
 	background: #eeb253
-	padding: 2rem 10rem
+	padding: 2rem 2.5rem
 	box-shadow: 0px 10px 5px 0px rgba(189,189,189,1)
 
 .logo
@@ -137,10 +169,11 @@ header
 	font-size: 2.9rem
 
 .nav-menu
+	position: relative
 	display: flex
 	align-items: center
 	padding: 0
-	margin-left: -18.5rem
+	margin-left: -23%
 	.active
 		color: #ffffff
 	&__item
@@ -153,13 +186,25 @@ header
 			color: #53544e
 			&:hover
 				color: #ffffff
+		&:last-child
+			margin-left: 1rem
 
 	.balance
-		&:after
-			margin-left: .5rem
-			display: inline-block
-			content: "40$"
-			opacity: .8
+
+		&__after
+			font-size: 1.2rem
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			transition-delay: 1s
+
+		&__top
+			display: block
+			padding-bottom: .5rem
+
+		&__bottom
+			padding-top: .5rem
+			opacity: 0.7
 
 	.fa
 		span 
@@ -170,6 +215,7 @@ header
 	justify-content: space-between
 	align-items: center
 	font-size: 1.5rem
+	margin-right: 2rem
 
 	.new-order
 		text-align: center
@@ -338,5 +384,7 @@ header
 			height: 100%
 			border-radius: 30rem
 			background: #a6e7f7
+.mobile-nav-menu
+	display: none
 
 @import "media"
