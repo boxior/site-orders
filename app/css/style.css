@@ -105,9 +105,9 @@ h1, h2, h3, h4, h6 {
         width: 150%;
         height: .3rem;
         background: #76ac5c; }
-  .order-nav__sorted {
-    font-size: 1.6rem;
-    text-transform: uppercase; }
+  .order-nav__sorted .sorted:hover {
+    cursor: pointer;
+    background: #f3f5f7; }
 
 .content-header {
   padding: 2.5rem 2.5rem 2.5rem 4.5rem;
