@@ -17,7 +17,7 @@
       <header class="header">
         <div class="logo">
           <i class="fa fa-pencil" aria-hidden="true">iWrite</i>
-
+          
         </div>
         <ul class="nav-menu">
           <li class="nav-menu__item">
@@ -56,12 +56,12 @@
           </li>
         </ul>
         <div class="right-menu">
-          <button class="new-order">
+          <button type="button" class="new-order">
             <i class="fa fa-plus" aria-hidden="true"><span>new order</span></i>
           </button>
           <i class="fa fa-heart-o" aria-hidden="true"></i>
           <i class="fa fa-bell-o" aria-hidden="true"></i>
-          <button class="right-menu__user">
+          <button type="button" class="right-menu__user">
             <i class="fa fa-user right-menu__user--fa-user" aria-hidden="true"></i>
             <i class="fa fa-chevron-down right-menu__user--fa-down" aria-hidden="true"></i>
           </button>    
@@ -80,20 +80,20 @@
         <div id="canceled">Canceled</div>
       </div>
       <select class="order-nav__sorted">
-        <option value="none" id="sorted" disabled="" selected="">sorted by ...</option>
-        <option value="id" id="sorted">sorted by Id</option>
-        <option value="price" id="sorted">sorted by Price</option>
-        <option value="deadline" id="sorted">sorted by Deadline</option>
+        <option value="none" class="sorted" disabled="" selected="">sorted by ...</option>
+        <option value="id" class="sorted">sorted by Id</option>
+        <option value="price" class="sorted">sorted by Price</option>
+        <option value="deadline" class="sorted">sorted by Deadline</option>
       </select>
     </div>
     
     <div class="content-header">
-      <div>title</div>
-      <div>deadline</div>
-      <div>status</div>
-      <div>assigned to</div>
-      <div>price / paid</div>
-      <div>id</div>
+      <div class="content-header__title">title</div>
+      <div class="content-header__deadline">deadline</div>
+      <div class="content-header__status">status</div>
+      <div class="content-header__assigned">assigned to</div>
+      <div class="content-header__price">price / paid</div>
+      <div class="content-header__id">id</div>
     </div>
 
     <div class="content">

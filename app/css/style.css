@@ -107,7 +107,7 @@ h1, h2, h3, h4, h6 {
         width: 150%;
         height: .3rem;
         background: #76ac5c; }
-  .order-nav__sorted #sorted {
+  .order-nav__sorted .sorted {
     font-size: 1.6rem;
     text-transform: uppercase; }
 
@@ -416,23 +416,17 @@ header {
     .order-nav__menu > div {
       margin: 0 2rem 0 0; }
     .order__item {
-      text-align: -webkit-center;
       margin-top: 4rem; }
-      .order__item:nth-child(2) {
-        width: 100%; }
-      .order__item:nth-child(3) {
-        width: 100%; }
-      .order__item:nth-child(4) {
-        width: 100%; }
-      .order__item:nth-child(5) {
-        text-align: center;
-        width: 100%; }
-      .order__item:nth-child(6) {
-        text-align: center;
-        width: 100%; }
-      .order__item:nth-child(7) {
+      .order__item:nth-child(n) {
         width: 100%;
-        text-align: center; }
+        text-align: -webkit-center; }
+      .order__item div:first-child div:first-child {
+        font-size: 2rem;
+        text-transform: capitalize;
+        opacity: 0.8;
+        color: #deb15a; }
+    .order__name {
+      color: black !important; }
     .order__currentStep {
       text-align: -webkit-auto; }
   .nav-menu {
