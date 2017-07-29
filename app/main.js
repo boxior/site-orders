@@ -3,7 +3,6 @@
 $(function () {
   app.init();
   customSelectInit();
-  
 });
 
 var app = {
@@ -98,15 +97,8 @@ function buildOrder(e) {
     var sortedBy = e.sort(function(b, a) {
           return (a.id - b.id);
         });
-  };
-  // sortOrders(e);
-  // console.log(+e.id.slice(1))
-  
+  }
 }
-
-
-
-
 
 function getTimeLeft(deadline) {
   var currentDate = new Date();
@@ -119,7 +111,6 @@ function getTimeLeft(deadline) {
   } else {
     diffResult = Math.abs(Math.floor(diffDate * 24))  + ' hours'
   }
-
   return diffResult + ' left';
   
 }
@@ -172,7 +163,8 @@ $('.balance').hover(function(){
 });
 
 function windowSize(){
-    if ($(window).width() <= '768'){
+  console.log('jghjh');
+    if ($(window).width() <= 768){
         $('.mobile-nav-menu').children().remove();
         $('.nav-menu').clone().appendTo('.mobile-nav-menu');
 
@@ -203,7 +195,6 @@ function windowSize(){
         if(!$('.order__id').find('.content-header__id').length){
         $('.content-header__id').clone().prependTo('.order__id').css('display','block');
        }
-      
     }
 }
 $(window).on('load resize',windowSize);
